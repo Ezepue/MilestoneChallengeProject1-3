@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     }
     
     func setupUI() {
-        navigationController?.navigationBar.topItem?.title = "Fun with Flags"
+        navigationController?.navigationBar.topItem?.title = "FLAG VIEWER"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         imageView.layer.borderWidth = 1
         imageView.layer.borderColor = UIColor.lightGray.cgColor

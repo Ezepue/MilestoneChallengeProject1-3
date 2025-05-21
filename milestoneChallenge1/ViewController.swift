@@ -32,13 +32,13 @@ class ViewController: UITableViewController {
             cell.textLabel?.text = flags[indexPath.row].uppercased().replacingOccurrences(of: "@3X.PNG", with: "")
             cell.imageView?.image = UIImage(named: flags[indexPath.row])
             
-            cell.imageView?.layer.borderWidth = 1
+            cell.imageView?.layer.borderWidth = 2
             cell.imageView?.layer.borderColor = UIColor.lightGray.cgColor
             return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 70
+            return 80
         }
         
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
