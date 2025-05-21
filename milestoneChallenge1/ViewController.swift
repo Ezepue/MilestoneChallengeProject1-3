@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
         let items = try! fm.contentsOfDirectory(atPath: path)
 
         for item in items {
-            if item.hasSuffix("3x.png") {
+            if item.hasSuffix("@3x.png") {
                 // this is a picture to load!
                 flags.append(item)
             }
@@ -29,7 +29,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Country", for: indexPath)
-            cell.textLabel?.text = flags[indexPath.row].uppercased().replacingOccurrences(of: "@3X.PNG", with: "")
+            cell.textLabel?.text = flags[indexPath.row].uppercased().replacingOccurrences(of: "@3x.png", with: "")
             cell.imageView?.image = UIImage(named: flags[indexPath.row])
             
             cell.imageView?.layer.borderWidth = 2
@@ -46,7 +46,7 @@ class ViewController: UITableViewController {
                 let index = indexPath.row
                 vc.selectedImage = flags[index]
                 navigationController?.pushViewController(vc, animated: true)
-                vc.title = "FLAG OF \(flags[index].uppercased().replacingOccurrences(of: "@3X.PNG", with: ""))"
+                vc.title = "FLAG OF \(flags[index].uppercased().replacingOccurrences(of: "@3x.png", with: ""))"
             }
         }
 }
